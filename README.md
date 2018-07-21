@@ -54,4 +54,11 @@ then you just want to use this
 ```clojure
 user> (inv/invert-colls {:a [1 2] :b #{3 2 5} :c (list 1 6)})
 {1 #{:c :a}, 2 #{:b :a}, 3 #{:b}, 5 #{:b}, 6 #{:c}
+
+;; again a constructor can be passed
+user> (inv/invert-colls {:a [1 2] :b #{3 2 5} :c (list 1 6)} nil)
+{1 (:c :a), 2 (:b :a), 3 (:b), 5 (:b), 6 (:c)}
+
+user> (inv/invert-colls {:a [1 2] :b #{3 2 5} :c (list 1 6)} [:ok])
+{1 [:ok :a :c], 2 [:ok :a :b], 3 [:ok :b], 5 [:ok :b], 6 [:ok :c]}
 ```

@@ -1,4 +1,4 @@
-(defproject beoliver/map-inversions "1.0.1"
+(defproject beoliver/map-inversions "1.0.2"
   :description "simple functions for working with maps"
   :url "http://github.com/beoliver/map-inversions"
   :license {:name "Eclipse Public License"
